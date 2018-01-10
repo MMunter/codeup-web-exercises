@@ -8,7 +8,60 @@
     <title>Dog Walker Service</title>
 </head>
 <body>
-    <form method="POST"></form>
+    <form method="POST" action="https://hookb.in/v4O5mwwa">
+        <p>Create an account</p>
+
+        <label for="username">Pick a user name.</label>
+        <input id="username" name="username" type="text" placeholder="Username here">
+
+        <label for="password">Enter Password</label>
+        <input id="password" name="password" type="password" placeholder="Password">
+        <br>
+
+        <label for="dog_name">Enter your dog's name.</label>
+        <input id="dog_name" name="dog_name" type="text" placeholder="Your Dog's Name">
+        <br>
+
+        <label for="breed">What breed is your dog?</label>
+        <input id="breed" name="breed" type="text" placeholder="Breed">
+        <br>
+
+        <p>How old is your dog?</p>
+        <label><input type="radio" name="age" value="1 year or less">1 year or less</label>
+        <label><input type="radio" name="age" value="2-6 years">2-6 years</label>
+        <label><input type="radio" name="age" value="7-10 years">7-10 years</label>
+        <label><input type="radio" name="age" value="11 years or more">11 years or more</label>
+        <br>
+
+        <label for="temperament">Describe your dog's temperament. Check only one please.</label>
+        <select id="temperament" name="temperament">
+            <option value="passive">Passive</option>
+            <option value="plays_rough">Plays rough but means well</option>
+            <option value="aggressive">Aggressive</option>
+            <option value="be_afraid">BE AFRAID!!</option>
+        </select>
+        <br>
+
+        <input type="hidden" id="time" name="time">
+
+        <label for="time_needed">What days and times do you need your dog to be walked? Check all that apply.</label>
+        <select id="time_needed" name="time_needed[]" multiple>
+            <option value="weekday_mornings">Weekday Mornings(6-11)</option>
+            <option value="weekday_afternoons">Weekday Afternoons(11-5)</option>
+            <option value="weekday_evenings">Weekday Evenings(5-8)</option>
+            <option value="weekend_mornings">Weekend Mornings(6-11)</option>
+            <option value="weekend_afternoons">Weekend Afternoons(11-5)</option>
+            <option value="weekend_evenings">Weekend Evenings(5-7)</option>
+        </select>
+
+        <button>Walk my Dog!</button>
+
+
+
+
+
+
+    </form>
 
 </body>
 </html>
