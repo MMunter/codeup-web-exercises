@@ -8,34 +8,37 @@
     <title>Register With Us</title>
 </head>
 <body>
-    <form method="GET" action="https://hookb.in/KG7drXr2">
+    <form method="POST" action="https://hookb.in/KG7drXr2">
         <label for="username">Username</label>
         <input id="username" type="text" name="username" placeholder="Enter your username">
 
         <label for="password">Password</label>
         <input id="password" name="password" type="password" placeholder="Enter your password">
 
+
         <textarea name="bio" id="bio" rows="10" cols="40">Tell Us About You</textarea>
         <label for="bio">About Me</label>
-
-        <p>How did you hear about us?</p>
-
-        <label>
-            <input type="radio" name="q1" value="billboard">Billboard
-        </label>
-
-        <label>
-            <input type="radio" name="q1" value="radio advertisement">Radio Advertisement
-        </label>
-
-        <label>
-            <input type="radio" name="q1" value="internet advertisement">Internet Advertisement
-        </label>
-
-        <label>
-            <input type="radio" name="q1" value="other">Other
-        </label>
         <br>
+
+
+        <label for="hear">How did you hear about us?</label>
+        <select id="hear" name="hear[]" multiple>
+
+            <option value="billboard">Billboard</option>
+            <option value="radio advertisement">Radio Advertisement</option>
+            <option value="internet advertisement">Internet Advertisement</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+
+
+        <label for="browser">What browser are you using?</label>
+        <select id="browser" name="browser">
+            <option>Chrome</option>
+            <option>Safari</option>
+            <option>Explorer</option>
+            <option>Other</option>
+        </select>
 
         <button>Submit</button>
 
