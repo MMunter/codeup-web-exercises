@@ -1,0 +1,7 @@
+.fancy-header{
+    color: skyblue;
+}
+body{
+    background-image: url("../img/dogwalk.jpeg");
+    background-size: cover;
+}
