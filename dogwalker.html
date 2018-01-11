@@ -6,34 +6,65 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dog Walker Service</title>
+    <style>
+        .fancy-header{
+            color: #a52a2a;
+        }
+        body {
+            background: url('img/dogwalk.jpeg');
+            background-size: cover;
+        }
+
+
+    </style>
 </head>
 <body>
+
+    <h1 class="fancy-header">Welcome to the Doggy Walkers!!</h1>
     <form method="POST" action="https://hookb.in/v4O5mwwa">
-        <p>Create an account</p>
+        <fieldset><legend><h1>Your Information</h1></legend>
+            <label for="username">Enter username.</label>
+            <input id="username" name="username" type="text" placeholder="Username here">
 
-        <label for="username">Pick a user name.</label>
-        <input id="username" name="username" type="text" placeholder="Username here">
+            <label for="password">Enter Password</label>
+            <input id="password" name="password" type="password" placeholder="Password">
+            <br>
 
-        <label for="password">Enter Password</label>
-        <input id="password" name="password" type="password" placeholder="Password">
-        <br>
+            <label for="cust_name">Name</label>
+            <input id="cust_name" name="cust_name" type="text" placeholder="Your Name">
+            <br>
 
-        <label for="dog_name">Enter your dog's name.</label>
+            <label for="cust_phone">Phone Number</label>
+            <input id="cust_phone" name="cust_phone" type="text" placeholder="Phone Number">
+            <br>
+
+            <label for="cust_email">Email</label>
+            <input id="cust_email" name="cust_email" type="text" placeholder="Email">
+            <br>
+
+            <label for="911_contact">Emergency Contact</label>
+            <input id="911_contact" name="911_contact" type="text" placeholder="Emergency Contact">
+            <br>
+
+        </fieldset>
+
+        <fieldset><legend><h1>Dog Information</h1></legend>
+        <label for="dog_name">Name</label>
         <input id="dog_name" name="dog_name" type="text" placeholder="Your Dog's Name">
         <br>
 
-        <label for="breed">What breed is your dog?</label>
+        <label for="breed">Breed</label>
         <input id="breed" name="breed" type="text" placeholder="Breed">
         <br>
 
-        <p>How old is your dog?</p>
+        <p>Age</p>
         <label><input type="radio" name="age" value="1 year or less">1 year or less</label>
         <label><input type="radio" name="age" value="2-6 years">2-6 years</label>
         <label><input type="radio" name="age" value="7-10 years">7-10 years</label>
         <label><input type="radio" name="age" value="11 years or more">11 years or more</label>
         <br>
 
-        <label for="temperament">Describe your dog's temperament. Check only one please.</label>
+        <label for="temperament">Temperament. Check only one please.</label>
         <select id="temperament" name="temperament">
             <option value="passive">Passive</option>
             <option value="plays_rough">Plays rough but means well</option>
@@ -44,15 +75,53 @@
 
         <input type="hidden" id="time" name="time">
 
-        <label for="time_needed">What days and times do you need your dog to be walked? Check all that apply.</label>
-        <select id="time_needed" name="time_needed[]" multiple>
-            <option value="weekday_mornings">Weekday Mornings(6-11)</option>
-            <option value="weekday_afternoons">Weekday Afternoons(11-5)</option>
-            <option value="weekday_evenings">Weekday Evenings(5-8)</option>
-            <option value="weekend_mornings">Weekend Mornings(6-11)</option>
-            <option value="weekend_afternoons">Weekend Afternoons(11-5)</option>
-            <option value="weekend_evenings">Weekend Evenings(5-7)</option>
-        </select>
+        <p>When does your dog need to be walked? Check all that apply.</p>
+            <label>
+                <input type="checkbox" id="time1" name="time[]" value="Sunday">Sunday
+            </label>
+
+            <label>
+                <input type="checkbox" id="time2" name="time[]" value="monday">Monday
+            </label>
+
+            <label>
+                <input type="checkbox" id="time3" name="time[]" value="tuesday">Tuesday
+            </label>
+
+            <label>
+                <input type="checkbox" id="time4" name="time[]" value="wednesday">Wednesday
+            </label>
+
+            <label>
+                <input type="checkbox" id="time5" name="time[]" value="thursday">Thursday
+            </label>
+
+            <label>
+                <input type="checkbox" id="time6" name="time[]" value="friday">Friday
+            </label>
+
+            <label>
+                <input type="checkbox" id="time7" name="time[]" value="saturday">Saturday
+            </label>
+            <br>
+
+            <label>
+                <input type="checkbox" id="time8" name="time[]" value="6am-11am">6 am-11 am
+            </label>
+
+            <label>
+                <input type="checkbox" id="time9" name="time[]" value="11am-4pm">11 am-4 pm
+            </label>
+
+            <label>
+                <input type="checkbox" id="time10" name="time[]" value="4pm-9pm">4 pm-9pm
+            </label>
+            <br>
+
+         <label for="special_instructions">Special Instructions</label>
+         <input id="special_instructions" name="special_instructions" type="text" placeholder="Any Special Instrutions for your puppy">
+
+        </fieldset>
 
         <button>Walk my Dog!</button>
 

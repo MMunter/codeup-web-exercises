@@ -30,11 +30,16 @@
 
 
         <p>Applicant was referred to Landlord by:</p>
-        <label><input type="radio" name="referral" value="real_estate_agent">Real Estate Agent</label>
+        <label>
+            <input type="radio" name="referral" value="real_estate_agent">Real Estate Agent
+        </label>
         <label><input type="radio" name="referral" value="newspaper">Newspaper</label>
         <label><input type="radio" name="referral" value="sign">Sign</label>
         <label><input type="radio" name="referral" value="Internet">Internet</label>
-        <label><input type="radio" name="referral" value="Other">Other</label>
+        <label for="other">
+            <input type="radio" name="referral" value="Other">Other
+            <input id="other" name="other" type="text" placeholder="Please describe.">
+        </label>
         <br>
 
         <!--Will JavaScript for the following 6 lines of code-->
@@ -43,9 +48,6 @@
 
         <label for="agent_phone">Enter real estate agent's phone</label>
         <input id="agent_phone" name="agent_phone" type="text" placeholder="Agent's Phone">
-
-        <label for="other">If other, please describe.</label>
-        <input id="other" name="other" type="text" placeholder="Please describe.">
         <br>
 
         <label for="applicant_name">Enter Applicant Name(First, Middle, Last)</label>
@@ -53,8 +55,8 @@
         <br>
 
         <p>Is there a co-applicant?</p>
-        <label><input type="checkbox" id="co-applicant1" name="co-applicant[]" value="yes">Yes</label>
-        <label><input type="checkbox" id="co-applicant2" name="co-applicant[]" value="no">No</label>
+        <label><input type="radio" id="co-applicant1" name="co-applicant[]" value="yes">Yes</label>
+        <label><input type="radio" id="co-applicant2" name="co-applicant[]" value="no">No</label>
         <br>
 
         <p><em><strong>If yes, co-applicant must submit a separate application.</strong></em></p>
@@ -108,7 +110,7 @@
         <br>
 
         <p>Marital Status</p>
-        <label><input type="checkbox" id="marital_status" name="marital_status[]" value="Single">Single</label>
+        <label><input type="radio" id="marital_status" name="marital_status[]" value="Single">Single</label>
 
 
     </form>
