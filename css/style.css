@@ -4,6 +4,7 @@
 h1, h2, h3{
     color: blue;
     text-decoration: underline;
+    text-align:center;
 }
 body{
     background-color: blue;
@@ -40,20 +41,41 @@ a:hover{
 a:active{
     color:yellow;
 }
-fieldset{
-    position: center;
-}
 p{
     color:red;
 }
 .process{
     color:green;
     border: 1px solid black;
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
 }
-values{
+.values{
     color:red;
+    border: 1px solid black;
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
 }
-vision{
+.vision{
     color: chocolate;
-
+    border: 1px solid black;
+    display: block;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.centered{
+    width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    padding: 4px;
+    height: 200px;
+    color:green;
+}
+p{
+    text-align: center;
 }
