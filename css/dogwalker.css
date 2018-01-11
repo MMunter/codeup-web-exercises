@@ -1,7 +1,45 @@
 .fancy-header{
-    color: skyblue;
+    color: dodgerblue;
+    text-align: center;
 }
 body{
     background-image: url("../img/dogwalk.jpeg");
     background-size: cover;
 }
+.human{
+    color: #a52a2a;
+    text-align: center;
+}
+.dog{
+    text-align:center;
+    color: darkorange;
+
+}
+.person{
+    color: indianred;
+    font-family: "Comic Sans MS";
+    text-align: center;
+    font-size:x-large;
+}
+fieldset{
+    border-image: space;
+    border-width: 40px;
+}
+.canine{
+    font-size:x-large;
+    font-family: "American Typewriter";
+    color: brown;
+}
+
+/*input[type=radio]*/
+input{
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: black;
+}
+input [type=radio]
+{
+    float: top;
+}
+
