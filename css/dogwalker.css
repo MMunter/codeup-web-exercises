@@ -1,11 +1,48 @@
-.fancy-header{
-    color: dodgerblue;
-    text-align: center;
-}
 body{
     background-image: url("../img/dogwalk.jpeg");
     background-size: cover;
 }
+fieldset{
+    border-image: space;
+    border-width: 40px;
+}
+input{
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: black;
+}
+p{
+    margin-bottom: 0;
+}
+input[type=radio]
+{
+    margin-left: 50px;
+}
+label[for="special_instructions"]
+{
+    margin-bottom: 0;
+}
+button{
+    font-size: 16px;
+    background-color: green;
+    font-family: Chalkboard
+
+}
+button:active{
+    transform: translateY(5px);
+    box-shadow: 0 6px; #666;
+}
+input[type=checkbox] {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.fancy-header{
+    color: dodgerblue;
+    text-align: center;
+}
+
 .human{
     color: #a52a2a;
     text-align: center;
@@ -21,25 +58,52 @@ body{
     text-align: center;
     font-size:x-large;
 }
-fieldset{
-    border-image: space;
-    border-width: 40px;
-}
 .canine{
     font-size:x-large;
     font-family: "American Typewriter";
-    color: brown;
+    color: blue;
 }
 
-/*input[type=radio]*/
-input{
-    background-color: transparent;
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: black;
+
+
+#temperament{
+    margin-top: 30px;
 }
-input [type=radio]
-{
-    float: top;
+#special_instructions {
+    margin-top: 50px;
+
 }
+#time2{
+    margin-left: 20px;
+}
+#time3{
+    margin-left: 20px;
+}
+#time3{
+    margin-left: 20px;
+}
+#time4{
+    margin-left: 20px;
+}
+#time5{
+    margin-left: 20px;
+}
+#time6{
+    margin-left: 20px;
+}
+#time7{
+    margin-left:20px;
+}
+#time8{
+    margin-left: 200px;
+}
+#time9{
+    margin-left: 20px;
+}
+#time10{
+    margin-left: 20px;
+}
+
+
+
 
