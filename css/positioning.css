@@ -13,7 +13,7 @@ h1{
     color: white;
     margin-right: 50px;
 }
-.box:nth-child(4n+1){
+.box:nth-child(2n){
     clear:left;
 }
 .red{
