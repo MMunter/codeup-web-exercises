@@ -40,7 +40,7 @@
     width: 3vw;
     height: 12vh;
 }
-#before{
+body.nth-child(5){
     position: absolute;
     top: 5%;
     left: 49%;

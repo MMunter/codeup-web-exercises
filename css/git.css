@@ -1,0 +1,146 @@
+body{
+    position: relative;
+}
+h1{
+    font-family: cursive;
+    color: whitesmoke;
+    text-align: center;
+    font-size: xx-large;
+}
+nav{
+    text-align: right;
+    color: white;
+}
+h2{
+    text-align: center;
+    margin-top: 80px;
+}
+.red_box{
+    width: 98vw;
+    height: 240px;
+    padding: 10px;
+    background: red;
+    border: 1px solid red;
+    margin-top: 0;
+    margin-left: 0;
+}
+.top_hr{
+    width: 25px;
+    float: center:
+    background-color: white;
+}
+.comprehensive{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+.purchase, .second_purchase{
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    width: 200px;
+    height: 15px;
+    margin-left: 600px;
+    margin-top: 20px;
+}
+.started{
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+.intro{
+    color: black;
+    text-align: center;
+    margin-top: 50px;
+    font-family: "Courier New";
+}
+.next_hr, .third_hr, .last_hr{
+    width: 45px;
+    float: center;
+    background-color: red;
+    height: 2px;
+}
+.more{
+    text-align: center;
+    margin-top: 60px;
+}
+.intro_vids, .watch, .git, .revert, .status, .diff, .branch, .rebase, .clone, .remote{
+    color:red;
+}
+.getting{
+    text-align: center;
+    margin-top: 20px;
+}
+.paragraph{
+    border: 1px solid white;
+    text-align: left;
+    width: 200px;
+    height: 20px;
+}
+.getting_started{
+    margin-left: 200px;
+    margin-top: 20px;
+}
+.changes{
+    margin-left: 600px;
+    margin-top: -15px;
+}
+.history{
+    margin-left: 1000px;
+    margin-top: -20px;
+}
+.workflows{
+    margin-left: 200px;
+    margin-top: 150px;
+}
+.sharing{
+    margin-left: 600px;
+    margin-top: -25px;
+}
+.everyday{
+    margin-left: 1000px;
+    margin-top: -20px;
+}
+.ready{
+    width: 98vw;
+    height: 220px;
+    padding: 10px;
+    border: 1px solid red;
+    background: red;
+    margin-left:0;
+    margin-top: 200px;
+}
+.started{
+    text-align: center;
+    color: white;
+    margin-top: 25px;
+}
+.fourth_hr{
+    width: 45px;
+    color: white;
+    float: center;
+}
+.full{
+    text-align: center;
+    color: white;
+}
+.paypal{
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+.questions{
+    text-align: center;
+    font-size: xx-large;
+}
+.last_hr{
+    margin-top: -10px;
+}
+.problem{
+    text-align: center;
+}
+.email{
+    color: red;
+}

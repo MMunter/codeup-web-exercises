@@ -26,12 +26,13 @@ label[for="special_instructions"]
 button{
     font-size: 16px;
     background-color: green;
-    font-family: Chalkboard
+    font-family: Chalkboard;
 
 }
 button:active{
     transform: translateY(5px);
-    box-shadow: 0 6px; #666;
+    box-shadow: 0 6px;
+    color: #666;
 }
 input[type=checkbox] {
     margin-top: 20px;
