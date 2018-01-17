@@ -1,3 +1,4 @@
+/*Elements*/
 body{
     position: relative;
 }
@@ -15,6 +16,7 @@ h2{
     text-align: center;
     margin-top: 80px;
 }
+/*Classes*/
 .red_box{
     width: 98vw;
     height: 240px;
@@ -26,7 +28,7 @@ h2{
 }
 .top_hr{
     width: 25px;
-    float: center:
+    float: center;
     background-color: white;
 }
 .comprehensive{

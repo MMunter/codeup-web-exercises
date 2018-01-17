@@ -1,0 +1,17 @@
+@media screen and (min-width: 365px) {
+    .alert-info {
+        border: 1px solid gray;
+        background-color: lightskyblue;
+        width: 200px;
+        height: 10px;
+        margin: auto;
+        padding: 10px;
+        color: black;
+        font-size: x-small;
+        text-align: center;
+    }
+    h1{
+        text-align: center;
+        margin-top: 10px;
+    }
+}
