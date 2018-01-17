@@ -1,63 +1,93 @@
-.body{
-    position: relative;
-}
-.hidden-on-desktop {
-    border: 1px solid gray;
-    background-color: lightskyblue;
-    margin: auto;
-    width: 339px;
-    color: black;
-    text-align: center;
-}
-h1{
-    text-align: center;
-    display: block;
-    margin: auto;
-    width: 339px;
-}
-ul{
-    list-style-type: none;
+ .alert-info{
+     border: 1px solid gray;
+     background-color: lightskyblue;
+     display: block;
+     margin: auto;
+     color: black;
+     text-align: center;
+ }
+ h1{
+     text-align: center;
+     display: block;
+     margin: auto;
+ }
 
-}
-img{
-    width: 339px;
-    height: 224px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    clear: both;
-}
-.main{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 339px;
-}
-.sub-section{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 339px;
-}
-footer{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 339px;
-}
-li:nth-of-type(n){
-    border: 1px solid silver;
-    background-color: silver;
-    width: 339px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-li:nth-of-type(n+1){
-    margin-top:10px;
+ ul{
+     list-style-type: none;
+ }
 
-}
-.nav-links{
-    padding-left: 0;
-}
+ img{
+     width: 100%
+ }
+ .header-img {
+     width: 100%
+ }
+ .main{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ .sub-section {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ footer /*> p*/{
+     /*display: block;*/
+     /*margin-left: auto;*/
+     /*margin-right: auto;*/
+     clear: both;
+ }
+
+ li:nth-of-type(n) {
+     border: 1px solid silver;
+     background-color: silver;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     text-align: center;
+ }
+ li:nth-of-type(n+1) {
+     margin-top: 10px;
+ }
+ .nav-links {
+     padding-left: 0;
+ }
+     #social-media-links > a {
+     width: 5%;
+     height: 5%;
+     float: right;
+     /*text-align: right;*/
+     display: inline;
+     padding: 5px;
+ }
+     /*div > #social-media-links{*/
+         /*height: 50px;*/
+         /*width: 50%:*/
+     /*}*/
+ @media screen and (min-width:500px){
+     .alert-info{
+         display: none;
+     }
+     h1{
+         text-align: left;
+     }
+     .nav-links > li{
+         display: inline;
+     }
+     ul{
+         float: right;
+         text-align: right;
+     }
+     .main{
+         float: left;
+         width: 50%;
+     }
+     .sub-section{
+         float: right;
+         width: 50%;
+     }
+    /*footer > p{*/
+        /*margin-left: 0;*/
+     /*}*/
+ }
