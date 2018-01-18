@@ -38,8 +38,8 @@
     width: 12.5%;
     background-color: red;
 }
-@ media screen and (max-width:768px){
-    .one-half, .one-third, .one-fourth, .one-sixth, .one-eighth{
+@media screen and (max-width: 768px){
+    .one-half,.one-third,.one-fourth,.one-sixth,.one-eighth{
         width:100%;
     }
 
