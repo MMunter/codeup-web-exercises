@@ -1,18 +1,46 @@
 .container{
     margin: 0 auto;
     width: 100%;
-    box-sizing: border-box;
 }
 .row{
-    width:100;
+    width:100%;
+
 }
 .row:after{
-    content: "";
-    display: table;
+    content:"";
+    display:table;
     clear: both;
+    padding: 10px;
 }
 .column{
     float: left;
     padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
 }
-.column
+.one-half {
+    width: 50%;
+    background-color: blue;
+}
+.one-third{
+    width:33.3%;
+    background-color: orange;
+}
+.one-fourth{
+    width:25%;
+    background-color: violet;
+}
+.one-sixth{
+    width: 16.66%;
+    background-color: yellow;
+}
+.one-eighth{
+    width: 12.5%;
+    background-color: red;
+}
+@ media screen and (max-width:768px){
+    .one-half, .one-third, .one-fourth, .one-sixth, .one-eighth{
+        width:100%;
+    }
+
+}
