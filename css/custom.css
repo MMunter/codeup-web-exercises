@@ -1,0 +1,26 @@
+.body{
+
+}
+.jumbotron{
+    padding: 0;
+    margin:0;
+    min-height: 300px;
+    position: relative;
+    background-image: url("../img/pizza.png");
+}
+h1{
+    text-align: center;
+    width:100%;
+    background-color:white;
+    opacity: .5;
+    color:gray;
+    position:absolute;
+    left: 0;
+    top:40%;
+}
+.navbar-header,.navbar-collapse,.navbar-form{
+    display:inline;
+}
+.navbar-right{
+    margin-right:10px;
+}

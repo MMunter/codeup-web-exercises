@@ -20,23 +20,26 @@
 }
 .one-half {
     width: 50%;
-    background-color: blue;
+    /*background-color: blue;*/
 }
 .one-third{
     width:33.3%;
-    background-color: orange;
+    /*background-color: orange;*/
 }
 .one-fourth{
     width:25%;
-    background-color: violet;
+    /*background-color: violet;*/
 }
 .one-sixth{
     width: 16.66%;
-    background-color: yellow;
+    /*background-color: yellow;*/
 }
 .one-eighth{
     width: 12.5%;
-    background-color: red;
+    /*background-color: red;*/
+}
+.two-thirds{
+    width:66%;
 }
 @media screen and (max-width: 768px){
     .one-half,.one-third,.one-fourth,.one-sixth,.one-eighth{

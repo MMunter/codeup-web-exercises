@@ -39,9 +39,10 @@
     left: 40%;
     width: 3vw;
     height: 12vh;
+    transform:rotate(-45deg);
 }
-body.nth-child(5){
-    position: absolute;
+#star:before{
+    /*position: absolute;*/
     top: 5%;
     left: 49%;
     width: 3vw;
