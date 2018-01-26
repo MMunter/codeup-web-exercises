@@ -8,16 +8,12 @@
  * Example
  * > sayHello("codeup") // returns "Hello, codeup!"
  */
-function increment(x) {
-    return x + 1;
+
+
+function sayHello(name) {
+    return "Hello," + " " + name;
 }
-var four = increment(3)
 
-
-// function sayHello(name) {
-//     return "Hello," + " " + name;
-// }
-// var userName = sayHello(Marcy);
 
 /**
  * TODO:
@@ -26,6 +22,8 @@ var four = increment(3)
  *
  * console.log 'helloMessage' to check your work
  */
+var helloMessage = sayHello("Marcy");
+console.log(helloMessage);
 
 /**
  * TODO:
@@ -33,6 +31,8 @@ var four = increment(3)
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
+var myName = "Marcella";
+sayHello(myName);
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -55,7 +55,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
+function isTwo(number){
+    return number === 2;
 
+}
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -68,12 +71,19 @@ var random = Math.floor((Math.random() * 3) + 1);
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
+function calculateTip(percentage, total){
+    var tip = (percentage/100) * total;
+    return tip.toFixed(2);
+}
 /**
  * TODO:
  * Use prompt and alert in combination with your calculateTip function to
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
+var total = prompt("What is the total amount of your bill?");
+var percentage = prompt("What percentage would you like to tip?");
+alert ("The amount you should tip is $" + calculateTip(percentage, total));
 
 /**
  * TODO:
@@ -89,3 +99,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
+function applyDiscount(beginningPrice, discountPercentage){
+    var discountAmt = beginningPrice * (discountPercentage/100);
+    return (beginningPrice - discountAmt).toFixed(2);
+}
