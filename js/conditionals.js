@@ -182,15 +182,23 @@ alert(analyzeColorSwitch(userColor));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-function calculateTotal(luckyNumber, discount){
-    switch(luckyNumber) {
-        case "luckyNumber = 0":
-            return 100;
-            break;
-        case "luckyNumber = 1":
-            return
-    }
+function calculateTotal(luckyNumber, amount) {
+   switch (luckyNumber) {
+       case "luckyNumber === 0":
+           return amount;
+       case "luckyNumber === 1":
+           return amount - (amount * .1);
+       case "luckyNumber === 2":
+           return amount - (amount * .25);
+       case "luckyNumber === 3":
+           return amount - (amount * .35);
+       case "luckyNumber === 4":
+           return amount - (amount * .5);
+       case "luckyNumber === 5":
+           return 0;
+   }
 }
+
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.
@@ -200,3 +208,5 @@ function calculateTotal(luckyNumber, discount){
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
+// var totalBill = prompt("How much is your bill?");
+// alert("Your original total was " + totalBill + " and your lucky number is " + luckyNumber + " which means you now pay $" + calculateTotal(luckyNumber, totalBill));

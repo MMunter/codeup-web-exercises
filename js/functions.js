@@ -11,7 +11,7 @@
 
 
 function sayHello(name) {
-    return "Hello," + " " + name;
+    return "Hello," + " " + name + "!";
 }
 
 
@@ -32,7 +32,7 @@ console.log(helloMessage);
  * console.
  */
 var myName = "Marcella";
-sayHello(myName);
+console.log(sayHello(myName));
 
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
@@ -55,10 +55,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(random) {
-    return random === 2;
+function isTwo(number) {
+    return number == 2;
 }
-console.log(random + " " + isTwo(random));
+console.log("It is " + isTwo(random) + " that " + random + " is the number two.");
 
 /**
  * TODO:
