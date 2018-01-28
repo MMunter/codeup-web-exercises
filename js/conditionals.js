@@ -182,19 +182,20 @@ alert(analyzeColorSwitch(userColor));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
-function calculateTotal(luckyNumber, amount) {
-   switch (luckyNumber) {
-       case "luckyNumber === 0":
-           return amount;
-       case "luckyNumber === 1":
-           return amount - (amount * .1);
-       case "luckyNumber === 2":
-           return amount - (amount * .25);
-       case "luckyNumber === 3":
-           return amount - (amount * .35);
-       case "luckyNumber === 4":
-           return amount - (amount * .5);
-       case "luckyNumber === 5":
+function calculateTotal(number, amount) {
+    var origPrice = amount;
+   switch (number) {
+       case "number == 0":
+           return origPrice;
+       case "number == 1":
+           return (origPrice - (origPrice * .1));
+       case "number == 2":
+           return (origPrice - (origPrice * .25));
+       case "number == 3":
+           return (origPrice - (origPrice * .35));
+       case "number == 4":
+            return (origPrice - (origPrice * .5));
+       default:
            return 0;
    }
 }
@@ -207,6 +208,6 @@ function calculateTotal(luckyNumber, amount) {
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
-// var totalBill = prompt("How much is your bill?");
-// alert("Your original total was " + totalBill + " and your lucky number is " + luckyNumber + " which means you now pay $" + calculateTotal(luckyNumber, totalBill));
+var luckyNumber = Math.floor(Math.random() * 6);
+var totalBill = prompt("How much is your bill?");
+alert("Your original total was " + totalBill + " and your lucky number is " + luckyNumber + " which means you now pay $" + calculateTotal(luckyNumber, totalBill));

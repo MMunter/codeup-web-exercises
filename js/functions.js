@@ -73,8 +73,13 @@ console.log("It is " + isTwo(random) + " that " + random + " is the number two."
  */
 
 function calculateTip(percentage, total){
-    var tip = (percentage/100) * total;
-    return tip.toFixed(2);
+    if (percentage < 1){
+        return (percentage * total).toFixed(2);
+    }
+    else {
+        return (percentage/100 * total).toFixed(2);
+    }
+
 }
 /**
  * TODO:
