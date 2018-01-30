@@ -18,26 +18,29 @@
 var question = confirm("Would you like to enter a number?");
   if (question) {
       var number = prompt("Please enter a number.");
-      var evenOdd = number % 2;
-      if (evenOdd === 0) {
-          alert(number + " " + "is even.");
+      number = parseFloat(number);
+      if (isNaN(number)) {
+          alert("Please enter a number!");
       }
       else {
-          alert(number + " " + "is odd.");
-      }
-      var addHundred = parseInt(number) + 100;
-      alert(number + " + 100 = " + addHundred);
-      if (number > 0) {
-          alert(number + " is a positive number!");
-      }
-      else if (number < 0) {
-          alert(number + " is a negative number!");
-      }
-      else {
-          alert("This is the number 0.");
-      }
-      if (isNaN(number) === true) {
-          alert("This is not a number.");
+          var evenOdd = number % 2;
+          if (evenOdd === 0) {
+              alert(number + " " + "is even.");
+          }
+          else {
+              alert(number + " " + "is odd.");
+          }
+          var addHundred = parseInt(number) + 100;
+          alert(number + " + 100 = " + addHundred);
+          if (number > 0) {
+              alert(number + " is a positive number!");
+          }
+          else if (number < 0) {
+              alert(number + " is a negative number!");
+          }
+          else {
+              alert("This is the number 0.");
+          }
       }
   }
    else {
@@ -75,13 +78,17 @@ function positiveNegative(placeholder){
 var query = confirm("Would you like to enter a number?");
   if (query){
       var integer = prompt("Please enter a number.");
-      oddEven(integer);
-      hundredPlus(integer);
-      positiveNegative(integer);
+      integer = parseFloat(integer);
+      if (isNaN(integer)) {
+          alert("Please enter a number!");
+      }
+      else {
+          oddEven(integer);
+          hundredPlus(integer);
+          positiveNegative(integer);
+      }
   }
-  else if (isNaN(integer) === true){
-      alert("This is not a number.");
-  }
+
 
 /* ########################################################################## */
 
@@ -107,10 +114,22 @@ function analyzeColor (color){
         return "Blue is the color of the sky.";
     }
     else if (color === "red") {
-        return "Strawberries are red";
+        return "Strawberries are red.";
     }
-    else if (color === "cyan") {
-        return "I don't know anything about cyan.";
+    else if (color === "orange") {
+        return "Oranges are orange!";
+    }
+    else if (color === "yellow") {
+        return "The sun is yellow.";
+    }
+    else if (color === "green") {
+        return "Grass is green.";
+    }
+    else if (color === "indigo") {
+        return "Indigo is the color of blue jeans";
+    }
+    else if (color === "violet") {
+        return "Violet, you're turning violet, Violet!";
     }
     else {
         return "I don't know anything about " + color + ".";
@@ -144,8 +163,16 @@ function analyzeColorSwitch (color) {
             return "Blue is the color of the sky.";
         case "red":
             return "Strawberries are red";
-        case "cyan":
-            return "I don't know anything about cyan.";
+        case "orange":
+            return "Oranges are orange!";
+        case "yellow":
+            return "The sun is yellow.";
+        case "green":
+            return "Grass is green";
+        case "indigo":
+            return "Indigo is the color of blue jeans.";
+        case "violet":
+            return "Violet, you're turning violet, Violet!";
         default:
             return "I don't know anything about " + color + ".";
 
