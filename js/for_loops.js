@@ -3,8 +3,8 @@ function showMultiplicationTable (number){
         console.log(number + " x " + i + " = " + number * i);
     }
 }
+showMultiplicationTable(7)
 
-console.log(showMultiplicationTable(7));
 
 //Random Number Exercise
 
