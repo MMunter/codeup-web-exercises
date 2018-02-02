@@ -140,7 +140,7 @@
                 lastName: "Shetterly"
             }
         }
-    ]
+    ];
 
 
     /**
@@ -168,8 +168,9 @@
      *      ...
      */
     books.forEach(function(book, index) {
-        index = index + 1;
-        console.log("Book #" + index + "\n" + book.title + "\n" + book.author.firstName + " " + book.author.lastName + "\n---");
+        var bookTitle = "Book #" + (index + 1) + "\n" + "Title: " + book.title + "\n";
+        var bookAuthor = "Author: " + book.author.firstName + " " + book.author.lastName + "\n---";
+        console.log(bookTitle + bookAuthor);
     });
     /**
      * Bonus:
@@ -182,19 +183,30 @@
      *   `showBookInfo` function.
      */
     var booksNew = [];
-    function createBook(titleNew, authorNew) {
+    function createBook(title, author) {
         var bookNew = {};
-        bookNew.titleNew = titleNew;
+        bookNew.titleNew = title;
         var authorNew = {};
-        var splitAuthor = authorNew.split(" ", 2);
-        authorNew.firstName = splitAuthor[0];
-        authorNew.lastName = splitAuthor[1];
-        bookNew.authorNew = authorNew;
+        var splitAuthor = author.split(" ", 2);
+        bookNew.authorNew.firstName = splitAuthor[0];
+        bookNew.authorNew.lastName = splitAuthor[1];
+        bookNew.authorNew = author;
 
-        booksNew.push(bookNew);
+        return bookNew;
     }
 
-    console.log(createBook("1984", "George Orwell"));
+    console.log(booksNew.push(createBook("1984", "George Orwell")));
 
+
+    function showBookInfo(book) {
+        var bookTitle = book.title;
+        var authorFirstName = book.author.firstName;
+        var authorLastName = book.author.lastName;
+        return bookTitle + ", " + authorFirstName + " " + authorLastName;
+    }
+
+   books.forEach(function(book){
+       console.log(showBookInfo(book));
+   });
 
 })();
