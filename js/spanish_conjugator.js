@@ -106,7 +106,7 @@ if (verbErTest(verb) && (tense == "past")) {
     alert(conjugateErPastTense(verb));
 }
 else if (verbErTest(verb) && (tense =="present")) {
-    verb=verb.substring(0, verb.length - 2);
+    verb = verb.substring(0, verb.length - 2);
     alert(conjugateErPresentTense(verb));
 }
 else if (verbErTest(verb) && (tense == "future")) {
