@@ -95,9 +95,17 @@ function verbArTest(string) {
 
 //prompting user for verb and tense
 var verb = prompt("Enter a Spanish verb to be conjugated.");
-var tense = prompt("Would you like past, present, or future tense?");
 verb = verb.toLowerCase();
+
+while (!(verbErTest(verb)) && !(verbArTest(verb)) && !(verbIrTest(verb))) {
+    verb = prompt("Please enter a valid verb.");
+}
+var tense = prompt("Would you like past, present, or future tense?");
 tense = tense.toLowerCase();
+
+while(tense != "past" && tense != "present" && tense != "future") {
+    tense = prompt("Please enter a valid tense.");
+}
 
 
 //tests to see which verb ending & tense is needed
@@ -136,7 +144,4 @@ else if (verbArTest(verb) && (tense == "present")) {
 else if (verbArTest(verb) && (tense == "future")) {
     verb = verb.substring(0, verb.length - 2);
     alert(conjugateArFutureTense(verb));
-}
-else {
-    alert("This is not valid.");
 }
