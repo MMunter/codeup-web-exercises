@@ -5,10 +5,10 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
-<button id="btn1">Try Me!</button>
-<button id="btn2">See What I Do!</button>
-<button id="btn3">Press Me!</button>
-<button id="btn4">What Do I Do?</button>
+<button id="btn1">Change Main Header</button>
+<button id="btn2">Change Sub Header</button>
+<button id="btn3">Change LI's</button>
+<button id="btn4">Change 1st LI</button>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -75,18 +75,23 @@
         document.getElementById("btn1").addEventListener("click", changeHeader);
 
         var changeSubheader = function(event){
-            if (subHeader.style.color == "black"){
-                    subHeader.style.color = "blue";
+            if (subHeader.style.color == "blue") {
+                subHeader.style.color = "black";
             }
             else{
-                subHeader.style.color = "black";
+                subHeader.style.color = "blue";
             }
         }
         document.getElementById("btn2").addEventListener("click", changeSubheader);
 
         var changeListColor = function(event){
             for (var i = 0; i < listItems.length; i += 2){
-                listItems[i].style.color = "grey";
+                if (listItems[i].style.color == "grey"){
+                    listItems[i].style.color = "black";
+                }
+                else {
+                    listItems[i].style.color = "grey";
+                }
             }
         }
         document.getElementById("btn3").addEventListener("click", changeListColor);
