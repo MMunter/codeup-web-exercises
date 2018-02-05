@@ -5,10 +5,10 @@
     <title>DOM: Query and Modify</title>
 </head>
 <body>
-<button id="btn1">Change Main Header</button>
-<button id="btn2">Change Sub Header</button>
-<button id="btn3">Change LI's</button>
-<button id="btn4">Change 1st LI</button>
+<button id="main-header-btn">Change Main Header</button>
+<button id="sub-header-btn">Change Sub Header</button>
+<button id="li-btn">Change LI's</button>
+<button id="first-li-btn">Change 1st LI</button>
 
 <h1 id="main-header">Hello World!</h1>
 <ul>
@@ -72,7 +72,7 @@
             }
         }
 
-        document.getElementById("btn1").addEventListener("click", changeHeader);
+        document.getElementById("main-header-btn").addEventListener("click", changeHeader);
 
         var changeSubheader = function(event){
             if (subHeader.style.color == "blue") {
@@ -82,7 +82,7 @@
                 subHeader.style.color = "blue";
             }
         }
-        document.getElementById("btn2").addEventListener("click", changeSubheader);
+        document.getElementById("sub-header-btn").addEventListener("click", changeSubheader);
 
         var changeListColor = function(event){
             for (var i = 0; i < listItems.length; i += 2){
@@ -94,7 +94,7 @@
                 }
             }
         }
-        document.getElementById("btn3").addEventListener("click", changeListColor);
+        document.getElementById("li-btn").addEventListener("click", changeListColor);
 
         var changeDbId = function (event) {
             for (var i = 0; i < listItems.length; i++){
@@ -103,7 +103,7 @@
                 }
             }
         }
-        document.getElementById("btn4").addEventListener("click", changeDbId);
+        document.getElementById("first-li-btn").addEventListener("click", changeDbId);
     })();
 </script>
 </body>
