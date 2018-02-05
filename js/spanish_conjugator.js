@@ -96,56 +96,62 @@ function verbArTest(string) {
 }
 
 //prompting user for verb and tense
-var verb = prompt("Enter a Spanish verb to be conjugated.");
-verb = verb.toLowerCase();
+// while (!(verbErTest(verb)) && !(verbArTest(verb)) && !(verbIrTest(verb))) {
+//     verb = prompt("Please enter a valid verb.");
+// }
 
-while (!(verbErTest(verb)) && !(verbArTest(verb)) && !(verbIrTest(verb))) {
-    verb = prompt("Please enter a valid verb.");
-}
 
-var tense = prompt("Would you like past, present, or future tense?");
-tense = tense.toLowerCase();
-
-while(tense != "past" && tense != "present" && tense != "future") {
-    tense = prompt("Please enter a valid tense.");
-}
+// while(tense != "past" && tense != "present" && tense != "future") {
+//     tense = prompt("Please enter a valid tense.");
+// }
 
 
 //tests to see which verb ending & tense is needed
-if (verbErTest(verb) && (tense == "past")) {
-    verb = verb.substring(0, verb.length - 2);
-    document.write(conjugateErPastTense(verb));
-}
-else if (verbErTest(verb) && (tense =="present")) {
-    verb = verb.substring(0, verb.length - 2);
-    document.write(conjugateErPresentTense(verb));
-}
-else if (verbErTest(verb) && (tense == "future")) {
-    verb = verb.substring(0, verb.length - 2);
-    document.write(conjugateErFutureTense(verb));
-}
-else if (verbIrTest(verb) && (tense == "past")) {
-    verb = verb.substring(0, verb.length - 2);
-    document.write(conjugateIrPastTense(verb));
-}
-else if (verbIrTest(verb) && (tense == "present")) {
-    verb = verb.substring(0, verb.length - 2);
-    document.write(conjugateIrPresentTense(verb));
-}
-else if (verbIrTest(verb) && (tense == "future")) {
-    verb = verb.substring(0, verb.length - 2);
-    document.write(conjugateIrFutureTense(verb));
-}
-else if (verbArTest(verb) && (tense == "past")) {
-    verb = verb.substring(0, verb.length - 2);
-    document.write(conjugateArPastTense(verb));
-}
-else if (verbArTest(verb) && (tense == "present")) {
-    verb = verb.substring(0, verb.length - 2);
-    document.write(conjugateArPresentTense(verb));
-}
-else if (verbArTest(verb) && (tense == "future")) {
-    verb = verb.substring(0, verb.length - 2);
-   document.write(conjugateArFutureTense(verb));
-}
+ function testVerbs (verb, tense) {
+     var verb = document.getElementById("verb").value;
+     verb = verb.toLowerCase();
 
+     var tense = document.getElementById("tense").value;
+     tense = tense.toLowerCase();
+
+
+     if (verbErTest(verb) && (tense == "past")) {
+         verb = verb.substring(0, verb.length - 2);
+         document.write(conjugateErPastTense(verb));
+     }
+     else if (verbErTest(verb) && (tense == "present")) {
+         verb = verb.substring(0, verb.length - 2);
+         document.write(conjugateErPresentTense(verb));
+     }
+     else if (verbErTest(verb) && (tense == "future")) {
+         verb = verb.substring(0, verb.length - 2);
+         document.write(conjugateErFutureTense(verb));
+     }
+     else if (verbIrTest(verb) && (tense == "past")) {
+         verb = verb.substring(0, verb.length - 2);
+         document.write(conjugateIrPastTense(verb));
+     }
+     else if (verbIrTest(verb) && (tense == "present")) {
+         verb = verb.substring(0, verb.length - 2);
+         document.write(conjugateIrPresentTense(verb));
+     }
+     else if (verbIrTest(verb) && (tense == "future")) {
+         verb = verb.substring(0, verb.length - 2);
+         document.write(conjugateIrFutureTense(verb));
+     }
+     else if (verbArTest(verb) && (tense == "past")) {
+         verb = verb.substring(0, verb.length - 2);
+         document.write(conjugateArPastTense(verb));
+     }
+     else if (verbArTest(verb) && (tense == "present")) {
+         verb = verb.substring(0, verb.length - 2);
+         document.write(conjugateArPresentTense(verb));
+     }
+     else if (verbArTest(verb) && (tense == "future")) {
+         verb = verb.substring(0, verb.length - 2);
+         document.write(conjugateArFutureTense(verb));
+     }
+
+ }
+
+ document.getElementById("submit").addEventListener("click", testVerbs);

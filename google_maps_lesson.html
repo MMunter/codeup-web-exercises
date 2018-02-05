@@ -40,17 +40,21 @@
 
             var geocoder = new google.maps.Geocoder();
 
-            geocoder.geocode({"address": address}, function(results, status) {
-               if (status == google.maps.GeocoderStatus.OK) {
-                   map.setCenter(results[0].geometry.location);
-               }
-               else {
-                   alert("Geocoding was not successful - STATUS: " + status);
-               }
-            });
+            // geocoder.geocode({"address": address}, function(results, status) {
+            //    if (status == google.maps.GeocoderStatus.OK) {
+            //        map.setCenter(results[0].geometry.location);
+            //    }
+            //    else {
+            //        alert("Geocoding was not successful - STATUS: " + status);
+            //    }
+            // });
+
+
 
             var findAddress = function(event) {
-                geocoder.geocode({"address": address-entry}, function(results, status) {
+                var addressEntry = document.getElementById("address-entry").value;
+                geocoder.geocode({"address": addressEntry}, function(results, status) {
+
                     if (status == google.maps.GeocoderStatus.OK) {
                         map.setCenter(results[0].geometry.location);
                     }
