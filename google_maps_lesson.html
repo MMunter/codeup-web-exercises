@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Google Maps API</title>
+    <style type="text/css">
+        #map-canvas{
+            width: 770px;
+            height: 481px;
+        }
+    </style>
 </head>
 <body>
+    <div id="map-canvas"></div>
 
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7a53QJ5STa7Rtns_zN942EJkOuGcfHEU" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        (function() {
+            "use strict";
+
+            var mapOptions = {
+
+                zoom: 19,
+
+                center: {
+                    lat: 29.426791,
+                    lng: -98.489602
+                }
+            };
+
+            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+        })();
+    </script>
 </body>
 </html>
