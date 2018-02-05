@@ -1,3 +1,5 @@
+// document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+
 //functions for all regular verb endings and tenses
 function conjugateErPresentTense (string) {
     var yo = "Yo " + string + "o<br>";
@@ -100,6 +102,7 @@ verb = verb.toLowerCase();
 while (!(verbErTest(verb)) && !(verbArTest(verb)) && !(verbIrTest(verb))) {
     verb = prompt("Please enter a valid verb.");
 }
+
 var tense = prompt("Would you like past, present, or future tense?");
 tense = tense.toLowerCase();
 
@@ -111,7 +114,7 @@ while(tense != "past" && tense != "present" && tense != "future") {
 //tests to see which verb ending & tense is needed
 if (verbErTest(verb) && (tense == "past")) {
     verb = verb.substring(0, verb.length - 2);
-    document.writeln(conjugateErPastTense(verb));
+    document.write(conjugateErPastTense(verb));
 }
 else if (verbErTest(verb) && (tense =="present")) {
     verb = verb.substring(0, verb.length - 2);
@@ -145,3 +148,4 @@ else if (verbArTest(verb) && (tense == "future")) {
     verb = verb.substring(0, verb.length - 2);
    document.write(conjugateArFutureTense(verb));
 }
+
