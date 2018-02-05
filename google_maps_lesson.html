@@ -5,8 +5,8 @@
     <title>Google Maps API</title>
     <style type="text/css">
         #map-canvas{
-            width: 770px;
-            height: 481px;
+            width: 500px;
+            height: 500px;
         }
     </style>
 </head>
@@ -22,15 +22,28 @@
 
             var mapOptions = {
 
-                zoom: 19,
+                zoom: 18,
 
                 center: {
-                    lat: 29.426791,
-                    lng: -98.489602
+                    lat: 29.3,
+                    lng: -98.589902
                 }
             };
 
             var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+            var address = "8525 Floyd Curl, San Antonio, TX 78240";
+
+            var geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({"address": address}, function(results, status) {
+               if (status == google.maps.GeocoderStatus.OK) {
+                   map.setCenter(results[0].geometry.location);
+               }
+               else {
+                   alert("Geocoding was not successful - STATUS: " + status);
+               }
+            });
 
         })();
     </script>
