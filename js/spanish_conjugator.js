@@ -1,4 +1,4 @@
-// document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+document.getElementsByTagName("body")[0].style.backgroundColor = "red";
 
 //functions for all regular verb endings and tenses
 function conjugateErPresentTense (string) {
@@ -95,19 +95,8 @@ function verbArTest(string) {
     return string.endsWith("ar");
 }
 
-//prompting user for verb and tense
-// while (!(verbErTest(verb)) && !(verbArTest(verb)) && !(verbIrTest(verb))) {
-//     verb = prompt("Please enter a valid verb.");
-// }
-
-
-// while(tense != "past" && tense != "present" && tense != "future") {
-//     tense = prompt("Please enter a valid tense.");
-// }
-
-
-//tests to see which verb ending & tense is needed
- function testVerbs (verb, tense) {
+//function prompting user for verb and tense then tests to see which verb ending & tense is needed
+ function testVerbs () {
      var verb = document.getElementById("verb").value;
      verb = verb.toLowerCase();
 
@@ -117,39 +106,42 @@ function verbArTest(string) {
 
      if (verbErTest(verb) && (tense == "past")) {
          verb = verb.substring(0, verb.length - 2);
-         document.write(conjugateErPastTense(verb));
+         document.getElementById("demo").innerHTML = (conjugateErPastTense(verb));
      }
      else if (verbErTest(verb) && (tense == "present")) {
          verb = verb.substring(0, verb.length - 2);
-         document.write(conjugateErPresentTense(verb));
+         document.getElementById("demo").innerHTML = (conjugateErPresentTense(verb));
      }
      else if (verbErTest(verb) && (tense == "future")) {
          verb = verb.substring(0, verb.length - 2);
-         document.write(conjugateErFutureTense(verb));
+         document.getElementById("demo").innerHTML = (conjugateErFutureTense(verb));
      }
      else if (verbIrTest(verb) && (tense == "past")) {
          verb = verb.substring(0, verb.length - 2);
-         document.write(conjugateIrPastTense(verb));
+         document.getElementById("demo").innerHTML = (conjugateIrPastTense(verb));
      }
      else if (verbIrTest(verb) && (tense == "present")) {
          verb = verb.substring(0, verb.length - 2);
-         document.write(conjugateIrPresentTense(verb));
+         document.getElementById("demo").innerHTML = (conjugateIrPresentTense(verb));
      }
      else if (verbIrTest(verb) && (tense == "future")) {
          verb = verb.substring(0, verb.length - 2);
-         document.write(conjugateIrFutureTense(verb));
+         document.getElementById("demo").innerHTML = (conjugateIrFutureTense(verb));
      }
      else if (verbArTest(verb) && (tense == "past")) {
          verb = verb.substring(0, verb.length - 2);
-         document.write(conjugateArPastTense(verb));
+         document.getElementById("demo").innerHTML = (conjugateArPastTense(verb));
      }
      else if (verbArTest(verb) && (tense == "present")) {
          verb = verb.substring(0, verb.length - 2);
-         document.write(conjugateArPresentTense(verb));
+         document.getElementById("demo").innerHTML = (conjugateArPresentTense(verb));
      }
      else if (verbArTest(verb) && (tense == "future")) {
          verb = verb.substring(0, verb.length - 2);
-         document.write(conjugateArFutureTense(verb));
+         document.getElementById("demo").innerHTML = (conjugateArFutureTense(verb));
+     }
+     else {
+         document.getElementById("demo").innerHTML = "Please enter a valid verb and tense.";
      }
 
  }
