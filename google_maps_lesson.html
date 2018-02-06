@@ -11,9 +11,9 @@
     </style>
 </head>
 <body>
-    <label for="address-entry">Enter an address with city and state.</label>
-    <input id="address-entry" type="text" name="address-entry" placeholder="Enter address here.">
-    <button id="find-address">Find Address!</button>
+    <!--<label for="address-entry">Enter an address with city and state.</label>-->
+    <!--<input id="address-entry" type="text" name="address-entry" placeholder="Enter address here.">-->
+    <!--<button id="find-address">Find Address!</button>-->
 
     <div id="map-canvas"></div>
 
@@ -24,17 +24,17 @@
         (function() {
             "use strict";
 
-            var mapOptions = {
+            // var mapOptions = {
+            //
+            //     zoom: 16,
+            //
+            //     center: {
+            //         lat: 29.3,
+            //         lng: -98.589902
+            //     }
+            // };
 
-                zoom: 16,
-
-                center: {
-                    lat: 29.3,
-                    lng: -98.589902
-                }
-            };
-
-            var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+            // var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
             // var address = "8525 Floyd Curl, San Antonio, TX 78240";
 
@@ -51,19 +51,33 @@
 
 
 
-            var findAddress = function(event) {
-                var addressEntry = document.getElementById("address-entry").value;
-                geocoder.geocode({"address": addressEntry}, function(results, status) {
+            // var findAddress = function(event) {
+            //     var addressEntry = document.getElementById("address-entry").value;
+            //     geocoder.geocode({"address": addressEntry}, function(results, status) {
+            //
+            //         if (status == google.maps.GeocoderStatus.OK) {
+            //             map.setCenter(results[0].geometry.location);
+            //         }
+            //         else {
+            //             alert("Geocoding was not successful - STATUS: " + status);
+            //         }
+            //     });
+            // }
+            // document.getElementById("find-address").addEventListener("click", findAddress);
 
-                    if (status == google.maps.GeocoderStatus.OK) {
-                        map.setCenter(results[0].geometry.location);
-                    }
-                    else {
-                        alert("Geocoding was not successful - STATUS: " + status);
-                    }
-                });
-            }
-            document.getElementById("find-address").addEventListener("click", findAddress);
+          var myLatlng = new google.maps.LatLng(29.4260, -98.4861);
+          var mapOptions = {
+              zoom: 15,
+              center: myLatlng
+          }
+          var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+          var marker = new google.maps.Marker({
+              position: myLatlng,
+              title: "The Alamo"
+          });
+
+          marker.setMap(map);
 
         })();
     </script>
