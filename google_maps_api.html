@@ -21,8 +21,6 @@
 
             var geocoder = new google.maps.Geocoder();
 
-            var faveRestaurant = "1709 Babcock Rd, San Antonio, TX, 78229";
-
 
             var mapOptions = {
                 zoom: 20,
@@ -30,32 +28,85 @@
 
             var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-            geocoder.geocode({"address": faveRestaurant}, function(results, status){
-                if (status==google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                    var marker = new google.maps.Marker({
-                        position: results[0].geometry.location,
-                        title: "Thai Restaurant",
-                        draggable: true,
-                        map: map,
-                        animation: google.maps.Animation.DROP
-                    });
+            // geocoder.geocode({"address": faveRestaurant}, function(results, status){
+            //     if (status==google.maps.GeocoderStatus.OK) {
+            //         map.setCenter(results[0].geometry.location);
+            //         var marker = new google.maps.Marker({
+            //             position: results[0].geometry.location,
+            //             title: "Thai Restaurant",
+            //             draggable: true,
+            //             map: map,
+            //             animation: google.maps.Animation.DROP
+            //         });
+            //
+            //         marker.setMap(map);
+            //
+            //
+            //         var infowindow = new google.maps.InfoWindow({
+            //             content: "<a href='http://www.thairestaurant-sa.com' target='_blank'>Thai Restaurant</a> is really the name of the restaurant!! Their beef and broccoli is the best!  They add red pepper flakes to your meal if you request it and you choose the amount so you can have no spice, really spicy and everything in between!"
+            //         });
+            //
+            //         marker.addListener("click", function() {
+            //             infowindow.open(map, marker);
+            //         });
+            //     }
+            //     else{
+            //         alert("Geocoding was not successful - STATUS: " + status);
+            //     }
+            // });
 
-                    marker.setMap(map);
+            var restaurants = [
+                {
+                    restaurantAddress: "1709 Babcock Rd, San Antonio, TX, 78229",
+                    infoWindowText: "Thai Restaurant is really the name of this restaurant!",
+                    name: "Thai Restaurant"
+                },
 
+                {
+                    restaurantAddress: "8822 Huebner Rd, San Antonio, TX 78240",
+                    infoWindowText: "Capparelli's is authentic Italian food!",
+                    name: "Capparelli's "
+                },
 
-                    var infowindow = new google.maps.InfoWindow({
-                        content: "<a href='http://www.thairestaurant-sa.com' target='_blank'>Thai Restaurant</a> is really the name of the restaurant!! Their beef and broccoli is the best!  They add red pepper flakes to your meal if you request it and you choose the amount so you can have no spice, really spicy and everything in between!"
-                    });
+                {
+                    restaurantAddress: "8440 Fredericksburg Rd, San Antonio, TX 78229",
+                    infoWindowText: "San Antonio Burger Company has delicious burgers.  They also have sandwiches and wings.",
+                    name: "San Antonio Burger Company"
+                },
 
-                    marker.addListener("click", function() {
-                        infowindow.open(map, marker);
-                    });
+                {
+                    restaurantAddress: "8448 Fredericksburg Rd, San Antonio, TX, 78229",
+                    infoWindowText: "Paris Sandwiches reminds me of a little French cafe.  Their pastries are tiny but delicious!!",
+                    name: "Paris Sandwiches"
                 }
-                else{
-                    alert("Geocoding was not successful - STATUS: " + status);
-                }
-            });
+            ];
+
+             restaurants.forEach(function(restaurant){
+                 geocoder.geocode({"address": restaurant.restaurantAddress}, function (results, status){
+                     if (status==google.maps.GeocoderStatus.OK){
+                         map.setCenter(results[0].geometry.location);
+                         var marker = new google.maps.Marker({
+                             position: results[0].geometry.location,
+                             title: restaurant.name,
+                             draggable: true,
+                             map: map,
+                             animation: google.maps.Animation.DROP
+                         });
+                         marker.setMap(map);
+
+                         var infowindow = new google.maps.InfoWindow({
+                             content: restaurant.infoWindowText
+
+                         });
+                         marker.addListener("click", function() {
+                             infowindow.open(map, marker);
+                         });
+                    }
+                    else{
+                         alert("Geocoding was not successful - STATUS: " + status);
+                     }
+                 });
+             });
 
 
 
