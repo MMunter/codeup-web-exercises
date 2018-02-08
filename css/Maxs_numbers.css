@@ -1,0 +1,26 @@
+body{
+    background-color: deepskyblue;
+}
+
+.number{
+    box-sizing: border-box;
+    border: 1px solid black;
+    width: 17%;
+    height: 10em;
+    margin-right: 10px;
+    float: left;
+    background-color: yellow;
+    text-align: center;
+    font-size: 30px;
+    padding-top: 120px;
+    margin-top: 50px;
+    margin-left: 25px;
+}
+
+#one{
+
+}
+
+#nine{
+
+}
