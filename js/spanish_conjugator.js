@@ -104,39 +104,39 @@ function verbArTest(string) {
      var tense = document.getElementById("tense").value;
      tense = tense.toLowerCase();
 
-     if (verbErTest(verb) && (tense == "past")) {
+     if (verbErTest(verb) && tense === "past") {
          verb = verb.substring(0, verb.length - 2);
          document.getElementById("demo").innerHTML = (conjugateErPastTense(verb));
      }
-     else if (verbErTest(verb) && (tense == "present")) {
+     else if (verbErTest(verb) && (tense ==="present")) {
          verb = verb.substring(0, verb.length - 2);
          document.getElementById("demo").innerHTML = (conjugateErPresentTense(verb));
      }
-     else if (verbErTest(verb) && (tense == "future")) {
+     else if (verbErTest(verb) && (tense ==="future")) {
          verb = verb.substring(0, verb.length - 2);
          document.getElementById("demo").innerHTML = (conjugateErFutureTense(verb));
      }
-     else if (verbIrTest(verb) && (tense == "past")) {
+     else if (verbIrTest(verb) && (tense ==="past")) {
          verb = verb.substring(0, verb.length - 2);
          document.getElementById("demo").innerHTML = (conjugateIrPastTense(verb));
      }
-     else if (verbIrTest(verb) && (tense == "present")) {
+     else if (verbIrTest(verb) && (tense ==="present")) {
          verb = verb.substring(0, verb.length - 2);
          document.getElementById("demo").innerHTML = (conjugateIrPresentTense(verb));
      }
-     else if (verbIrTest(verb) && (tense == "future")) {
+     else if (verbIrTest(verb) && (tense ==="future")) {
          verb = verb.substring(0, verb.length - 2);
          document.getElementById("demo").innerHTML = (conjugateIrFutureTense(verb));
      }
-     else if (verbArTest(verb) && (tense == "past")) {
+     else if (verbArTest(verb) && (tense ==="past")) {
          verb = verb.substring(0, verb.length - 2);
          document.getElementById("demo").innerHTML = (conjugateArPastTense(verb));
      }
-     else if (verbArTest(verb) && (tense == "present")) {
+     else if (verbArTest(verb) && (tense ==="present")) {
          verb = verb.substring(0, verb.length - 2);
          document.getElementById("demo").innerHTML = (conjugateArPresentTense(verb));
      }
-     else if (verbArTest(verb) && (tense == "future")) {
+     else if (verbArTest(verb) && (tense ==="future")) {
          verb = verb.substring(0, verb.length - 2);
          document.getElementById("demo").innerHTML = (conjugateArFutureTense(verb));
      }
@@ -145,5 +145,5 @@ function verbArTest(string) {
      }
 
  }
-
+ 
  document.getElementById("submit").addEventListener("click", testVerbs);
