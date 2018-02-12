@@ -106,8 +106,8 @@ function verbArTest(string) {
 
      if (verbErTest(verb) && tense === "past") {
          verb = verb.substring(0, verb.length - 2);
-         document.getElementById("demo").innerHTML = (conjugateErPastTense(verb));
-         // $("#demo").innerHTML = (conjugateErPastTense(verb));
+         // document.getElementById("demo").innerHTML = (conjugateErPastTense(verb));
+         $("#demo").html(conjugateErPastTense(verb));  //jquery code to do same as above line
      }
      else if (verbErTest(verb) && (tense ==="present")) {
          verb = verb.substring(0, verb.length - 2);
