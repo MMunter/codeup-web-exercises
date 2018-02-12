@@ -147,4 +147,5 @@ function verbArTest(string) {
 
  }
  
- document.getElementById("submit").addEventListener("click", testVerbs);
+ // document.getElementById("submit").addEventListener("click", testVerbs);
+$("#submit").click(testVerbs);
