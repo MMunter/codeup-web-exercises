@@ -1,4 +1,4 @@
-document.getElementsByTagName("body")[0].style.backgroundColor = "red";
+document.getElementsByTagName("body")[0].style.backgroundColor = "green";
 document.getElementById("demo").style.textAlign = "center";
 
 //functions for all regular verb endings and tenses
