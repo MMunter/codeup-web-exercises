@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery FAQ</title>
+    <style>
+        .invisible{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>NATIONAL PARK FAQ'S</dt>
+        <dd class="invisible">National parks are run by the government.</dd>
+        <dt>Text</dt>
+        <dd class="invisible">Some parks have camping ground</dd>
+        <dt>text</dt>
+        <dd class="invisible">Parks</dd>
+        <dt>Text</dt>
+        <dd class="invisible">National</dd>
+        <dt>Text</dt>
+        <dd class="invisible">NATIONAL</dd>
+        <dt>Text</dt>
+        <dd class="invisible">PARKS</dd>
+        <dt>Text</dt>
+        <dd class="invisible">Teddy is a national park.</dd>
+        <dt>Text</dt>
+        <dd class="invisible">Sequoia is a national park.</dd>
+        <dt>Text</dt>
+        <dd class="invisible">Redwood is a national park.</dd>
+        <dt>Text</dt>
+        <dd class="invisible">Yogi Bear lived in a national park.</dd>
+    </dl>
+
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            "use strict";
+            //need a button to show answers
+            $("dt").click(function () {
+                $(this).next().toggleClass("invisible"); //this line will allow user to click question to get answer; next() shows next html element
+            });
+        });
+
+
+    </script>
+</body>
+</html>
