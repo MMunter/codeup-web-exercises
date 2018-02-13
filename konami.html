@@ -7,16 +7,47 @@
 <body>
     <h1>Konami Code</h1>
 
-
-
     <script src="js/jquery.js"></script>
     <script>
         "use strict";
+        var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+        var inputKeys = [];
 
-        $(document).keyup(function(event){
-            console.log(event.keyCode);
+        function checkKonami(array){
+            konamiCode.forEach(function(key, i){
+                if (array[i] === key) {
+                    $("body").css({"background-image": "url('img/blow_nes_game.jpeg')",
+                                    "color": "white",
+                                    'opacity': ".05",
+                                    "background-size": "cover",
+                                    "background-repeat": "no-repeat"
+                    });
+                }
+                while (array[i] !== key) {
+                    alert("Code was not correct! Please enter again.");
+                    inputKeys = [];
+                }
+            });
+        }
+
+        $(document).keyup(function(e){
+            var input = e.which;
+            inputKeys.push(input);
+            if (inputKeys.length === 11){
+                checkKonami(inputKeys);
+            }
+            console.log(inputKeys.length);
+
+
         });
     </script>
+    <!--up = 38-->
+    <!--down = 40-->
+    <!--left = 37-->
+    <!--right = 39-->
+    <!--b = 66-->
+    <!--a = 65-->
+    <!--enter = 13-->
 
 
 </body>
