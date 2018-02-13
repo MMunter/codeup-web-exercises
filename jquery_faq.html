@@ -33,6 +33,33 @@
         <dd class="invisible">Yogi Bear lived in a national park.</dd>
     </dl>
 
+    <h3>Yellowstone National Park</h3>
+    <ul>
+        <li>Yellowstone covers 3 states.</li>
+        <li>Temperatures can go as low as 0℉</li>
+        <li>It can snow any time of year.</li>
+        <li>Yogi Bear lived in a park called Jellystone.</li>
+    </ul>
+
+    <h3>Grand Canyon National Park</h3>
+    <ul>
+        <li>The Grand Canyon is located in Arizona.</li>
+        <li>The South Rim is the most accessible part of the canyon.</li>
+        <li>The South RIm is 7000ft above sea level.</li>
+        <li>The least crowded time is November-February.</li>
+    </ul>
+
+    <h3>Enchanted Rock State Park</h3>
+    <ul>
+        <li>Located in Fredericksburg, TX</li>
+        <li>Swimming and biking are not allowed.</li>
+        <li>Humans have camped here for 12,000 years.</li>
+        <li>Many animals native to Texas can be found here.</li>
+    </ul>
+
+    <button type="button">Change Last Li</button>
+
+
     <script src="js/jquery.js"></script>
     <script>
         $(document).ready(function() {
@@ -41,7 +68,24 @@
             $("dt").click(function () {
                 $(this).next().toggleClass("invisible"); //this line will allow user to click question to get answer; next() shows next html element
             });
+
+            $("button").click(function(){
+                $("ul").each(function() {
+                   $(this).children().last().css("background-color", "yellow");
+                });
+            });
+
+            $("h3").click(function() {
+                $(this).next().children().css("font-weight", "bold");
+            });
+
+            $("ul").click(function() {
+                $(this).children().first().css("color", "blue");
+            });
         });
+
+
+
 
 
     </script>
