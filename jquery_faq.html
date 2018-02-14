@@ -7,6 +7,28 @@
         .invisible{
             display: none;
         }
+        .frame{
+            box-sizing: border-box;
+            border: 10px solid black;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-top: 50px;
+            margin-left: 25px;
+        }
+
+        #one{
+            background-image: url("img/white_kitty.jpg");
+            width: 200px;
+            height: 200px;
+            background-size: cover;
+        }
+
+        .pic-btn{
+            clear:right;
+        }
+
+
     </style>
 </head>
 <body>
@@ -58,7 +80,13 @@
     </ul>
 
     <button type="button">Change Last Li</button>
+    <br>
 
+
+    <div class="frame" id="one"></div>
+    <div class="frame" id="two"></div>
+    <div class="frame" id="three"></div>
+    <button class="pic-btn" type="button">Change Image</button>
 
     <script src="js/jquery.js"></script>
     <script>
@@ -83,6 +111,8 @@
                 $(this).children().first().css("color", "blue");
             });
         });
+
+
 
 
 
