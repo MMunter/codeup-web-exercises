@@ -34,8 +34,7 @@
 </head>
 <body>
     <div class="alert alert-info alert-dismissible">
-        <h1>Would you like to sign up for our newsletter?</h1>
-        <span>X</span>
+        <h1>Would you like to sign up for our newsletter?<span id="click-x">X</span></h1>
         <button type="button" class="btn btn-default" data-dismiss="alert">No, thanks.</button>
     </div>
 
@@ -103,7 +102,7 @@
         <li>Many animals native to Texas can be found here.</li>
     </ul>
 
-    <button type="button">Change Last Li</button>
+    <button id="li-button" type="button">Change Last Li</button>
     <!--<br>-->
 
 
@@ -121,7 +120,7 @@
                 $(this).next().toggleClass("invisible"); //this line will allow user to click question to get answer; next() shows next html element
             });
 
-            $("button").click(function(){
+            $("#li-button").click(function(){
                 $("ul").each(function() {
                    $(this).children().last().css("background-color", "yellow");
                 });
@@ -135,19 +134,21 @@
                 $(this).children().first().css("color", "blue");
             });
 
-            // $("span").click(function() {
-            //     $("div").hide();
+            // $("#click-x").click(function() {
+            //     $(".alert").hide();
             // });
 
-            $("li").hide();
+            $("ul").hide();
 
             $("h3").click(function() {
-                $(this).next().children().slideToggle();
-            })
+                $(this).next().slideToggle();
+            });
 
             // $("h2").hide();
             //
-            // $("h2").fadeIn(8000)
+            // $("h2").fadeIn(8000);
+
+            // $(.alert).hide().delay(2000).removeClass("hidden").fadeIn(1000);
 
             window.setTimeout(function() {
                 $("#myModal").modal("show");
