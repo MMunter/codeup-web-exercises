@@ -32,6 +32,13 @@
     </style>
 </head>
 <body>
+    <div class="question">
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <span>X</span>
+    </div>
+
+    <h2>Would you like to register for the site?</h2>
+
     <dl>
         <dt>NATIONAL PARK FAQ'S</dt>
         <dd class="invisible">National parks are run by the government.</dd>
@@ -80,13 +87,13 @@
     </ul>
 
     <button type="button">Change Last Li</button>
-    <br>
+    <!--<br>-->
 
 
-    <div class="frame" id="one"></div>
-    <div class="frame" id="two"></div>
-    <div class="frame" id="three"></div>
-    <button class="pic-btn" type="button">Change Image</button>
+    <!--<div class="frame" id="one"></div>-->
+    <!--<div class="frame" id="two"></div>-->
+    <!--<div class="frame" id="three"></div>-->
+    <!--<button class="pic-btn" type="button">Change Image</button>-->
 
     <script src="js/jquery.js"></script>
     <script>
@@ -110,7 +117,25 @@
             $("ul").click(function() {
                 $(this).children().first().css("color", "blue");
             });
+
+            $("span").click(function() {
+                $("div").hide();
+            });
+
+            $("li").hide();
+
+            $("h3").click(function() {
+                $(this).next().children().slideToggle();
+            })
+
+            $("h2").hide();
+
+            $("h2").fadeIn(8000, function() {
+                $(this).css("font-weight", "bold");
+            })
         });
+
+
 
 
 
