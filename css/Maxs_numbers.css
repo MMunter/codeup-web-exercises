@@ -13,9 +13,15 @@ body{
     text-align: center;
     font-size: 30px;
     padding-top: 120px;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 25px;
     font-family: 'Londrina Solid', cursive;
     color: red;
 }
 
+h1{
+    text-align: center;
+    font-family: 'Londrina Solid', cursive;
+    color: red;
+    font-size: 48px;
+}
