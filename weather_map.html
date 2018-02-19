@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <title>Weather Map Exercise</title>
     <style>
-        .container{
+        body{
             background-color: deepskyblue;
             width: 50%;
         }
         .singleDay{
             display: inline-block;
-            margin-left: 50px;
+            margin-left: 100px;
             background-color: silver;
         }
 
         #map-canvas{
             width: 500px;
-            height: 500px;
+            height: 300px;
+            margin-left: 400px;
         }
 
 
@@ -29,10 +30,10 @@
 <div class="container">
     <h1>Weather Application</h1>
 
-    <input id="lat" type="text" name="lat" placeholder="Enter latitude.">
-    <input id="long" type="text" name="long" placeholder="Enter longitude.">
+    <!--<input id="lat" type="text" name="lat" placeholder="Enter latitude.">-->
+    <!--<input id="long" type="text" name="long" placeholder="Enter longitude.">-->
 
-    <button id="coordinates" type="button">What's the weather?</button>
+    <!--<button id="coordinates" type="button">What's the weather?</button>-->
 
     <div id="weatherPanels"></div>
     <div id="map-canvas"></div>
@@ -55,15 +56,15 @@
 
 
 
-        function buildWeather() {
-            latLong.lat = $("#lat").val();
-            latLong.lon = $("#long").val();
+        function buildWeather(lat, lng) {
+            // latLong.lat = latitude;
+            // latLong.lon = longitude;
             var weatherRequest = $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
                 APPID: "7f8e3aa0aad113510e0c1eaafd1c17b8",
                 // q: "San Antonio, US",
                 units: "imperial",
-                lat: latLong.lat,
-                lon: latLong.lon
+                lat: lat,
+                lon: lng
         });
 
             weatherRequest.done(function (data) {
@@ -80,13 +81,14 @@
                     total += "</div>";
                 }
                 $('#weatherPanels').html(total);
+                // console.log(data);
 
             });
             weatherRequest.fail(function (job, status) {
-                console.log(status);
+                // console.log(status);
             });
 
-            buildMap();
+            // buildMap();
 
         }
 
@@ -123,27 +125,44 @@
 
             var geocoder = new google.maps.Geocoder();
 
-            var lat = $("#lat").val();
-            var lon = $("#long").val();
-            console.log("lat", lat);
-            var latlon = new google.maps.LatLng(lat, lon);
+            // var lat = $("#lat").val();
+            // var lon = $("#long").val();
+            // console.log("lat", lat);
+            var latlon = new google.maps.LatLng(29.4260, -98.4861);
+            console.log(latlon);
 
             var mapOptions = {
-                zoom: 13,
-                center: latlon
+                zoom: 8,
+                center: {
+                    lat: 29.4241,
+                    lng: -98.4936
+                }
             };
 
             var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-            geocoder.geocode({'latLng': latlon}, function(results, status) {
-                if (status == google.maps.GeocoderStatus.OK) {
-                    map.setCenter(results[0].geometry.location);
-                }
-                else {
-                    alert("Geocoding was not successful - STATUS: " + status);
-                }
+
+            var marker = new google.maps.Marker({
+                    position: latlon,
+                    map: map,
+                    draggable: true
+                });
+            marker.setMap(map);
+
+
+            google.maps.event.addListener(marker, 'dragend',  function(event) {
+                buildWeather(marker.getPosition().lat(), marker.getPosition().lng());
 
             });
+
+
+
+
+
         }
+
+        buildMap();
+
+
     });
 </script>
 
