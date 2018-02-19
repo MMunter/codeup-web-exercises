@@ -4,6 +4,32 @@
     <meta charset="UTF-8">
     <title>AJAX BLOG</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+
+        @import url('https://fonts.googleapis.com/css?family=Coming+Soon|Nothing+You+Could+Do');
+
+        h1{
+            font-family: "Coming Soon", "cursive";
+            text-align: left;
+            color: purple;
+        }
+        p{
+            font-family: "Nothing You Could Do", "cursive";
+
+        }
+        body{
+            background-color: deepskyblue;
+            color: white;
+
+        }
+        small{
+            float: right;
+            color: yellow;
+        }
+        sub{
+            color: black;
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -38,8 +64,8 @@
       function blogBuild(blogs) {
          var text = "";
          blogs.forEach(function(blog,index) {
-            text += "<h1 class='page-header'>" + blog.title + "</h1>";
-            text += "<h2> Date: " + blog.date + "</h2>";
+            text += "<h1 class='page-header'>" + blog.title + "<small>" + blog.date + "</small></h1>";
+            // text += "<h2> Date: " + blog.date + "</h2>";
             text += "<p>" + blog.content + "</p>";
             text += "<sub> Categories:" + blog.categories + "</sub>";
          });
