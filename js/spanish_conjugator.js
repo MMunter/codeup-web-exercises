@@ -1,4 +1,3 @@
-document.getElementsByTagName("body")[0].style.backgroundColor = "green";
 document.getElementById("demo").style.textAlign = "center";
 
 //functions for all regular verb endings and tenses
@@ -102,7 +101,6 @@ function verbArTest(string) {
      verb = verb.toLowerCase();
 
      var tense = document.getElementById("tense").value;
-     tense = tense.toLowerCase();
 
      if (verbErTest(verb) && tense === "past") {
          verb = verb.substring(0, verb.length - 2);
