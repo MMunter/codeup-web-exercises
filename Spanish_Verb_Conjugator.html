@@ -9,13 +9,13 @@
 <body>
     <div class="row">
         <div class="container">
-            <h1 class="header row col-xs-12 col-sm-12 col-lg-12 col-xl-12 text-center">SPANISH VERB CONJUGATOR</h1>
+            <h1 class="header text-center">SPANISH VERB CONJUGATOR</h1>
 
             <div class="row">
-                <label class="col-lg-4" for="verb">Enter a verb to be conjugated.</label>
-                <input class="col-lg-3" id="verb" type="text" name="verb" placeholder="Enter verb.">
+                <label for="verb">Enter a verb to be conjugated.</label>
+                <input id="verb" type="text" name="verb" placeholder="Enter verb.">
 
-                <select class="col-lg-3 col-lg-offset-1" id="tense">
+                <select id="tense">
                    <option value="past">Past</option>
                    <option value="present">Present</option>
                    <option value="future">Future</option>
@@ -23,7 +23,7 @@
             </div>
 
             <div class="row">
-                <button class="btn col-lg-3 col-lg-offset-4" id="submit">Conjugate my verb!</button>
+                <button class="btn" id="submit">Conjugate my verb!</button>
             </div>
 
             <p id="demo"></p>
