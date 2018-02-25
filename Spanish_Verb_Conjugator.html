@@ -12,18 +12,17 @@
             <h1 class="header text-center">SPANISH VERB CONJUGATOR</h1>
 
             <div class="row">
-                <label for="verb">Enter a verb to be conjugated.</label>
-                <input id="verb" type="text" name="verb" placeholder="Enter verb.">
+                <label class="col-md-5 col-lg-offset-1 col-lg-5" for="verb">Enter a verb to be conjugated.
+                    <input id="verb" type="text" name="verb" placeholder="Enter verb.">
+                </label>
 
-                <select id="tense">
+                <select class="col-lg-2 form-control-lg" id="tense">
                    <option value="past">Past</option>
                    <option value="present">Present</option>
                    <option value="future">Future</option>
                </select>
-            </div>
 
-            <div class="row">
-                <button class="btn" id="submit">Conjugate my verb!</button>
+                <button class="btn col-lg-2 col-lg-offset-1" id="submit">Conjugate my verb!</button>
             </div>
 
             <p id="demo"></p>

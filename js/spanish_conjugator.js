@@ -82,6 +82,16 @@ function conjugateIrFutureTense (string) {
     return yo + nos + tu + ud + uds;
 }
 
+//function for present tense irregular verbs (specifically volver and poder)
+function irregularVerbPresentTense(string) {
+    var yo = "Yo " + string.replace("o", "ue").replace("er", "o<br>");
+    var nos = "Nosotros " + string.replace("r", "mos<br>");
+    var tu = "Tú " + string.replace("o", "ue").replace("r", "s<br>");
+    var ud = "Usted " + string.replace("o", "ue").replace("r", " <br>");
+    var uds = "Ustedes " + string.replace("o", "ue").replace("r", "n");
+    return yo + nos + tu + ud + uds;
+}
+
 //functions testing for verb endings
 function verbErTest (string) {
     return string.endsWith("er");
@@ -102,7 +112,10 @@ function verbArTest(string) {
 
      var tense = document.getElementById("tense").value;
 
-     if (verbErTest(verb) && tense === "past") {
+     if ((verb === "poder" || verb === "volver") && tense === "present"){
+         $("#demo").html(irregularVerbPresentTense(verb));
+     }
+     else if (verbErTest(verb) && tense === "past") {
          verb = verb.substring(0, verb.length - 2);
          // document.getElementById("demo").innerHTML = (conjugateErPastTense(verb));
          $("#demo").html(conjugateErPastTense(verb));  //jquery code to do same as above line
@@ -144,6 +157,6 @@ function verbArTest(string) {
      }
 
  }
- 
+
  // document.getElementById("submit").addEventListener("click", testVerbs);
 $("#submit").click(testVerbs);
