@@ -20,15 +20,13 @@ body {
 
 label{
     color: green;
-    /*margin-left: 100px;*/
-    /*margin-top: 70px;*/
-    /*padding: 20px;*/
+    margin-left: 110px;
+
 }
 
 #verb {
-    /*width: 200px;*/
-    /*height: 30px;*/
-    /*margin-right: 30px;*/
+    text-align: center;
+    height: 30px;
     background-color: red;
     color: white;
 }
@@ -37,5 +35,15 @@ label{
     color: green;
     font-weight: bold;
     font-size: 24px;
-
 }
+
+#tense{
+    margin-left: -60px;
+    height: 30px;
+}
+
+#conjugate{
+    margin-left: 20px;
+    height: 30px;
+}
+
