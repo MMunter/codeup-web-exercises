@@ -1,5 +1,3 @@
-document.getElementById("demo").style.textAlign = "center";
-
 //functions for all regular verb endings and tenses
 function conjugateErPresentTense (string) {
     var yo = "Yo " + string + "o<br>";
@@ -157,12 +155,6 @@ function verbArTest(string) {
      }
 
  }
-
-     // $("verb").click(function (){
-     //    if (!verbIrTest(verb) || !verbArTest(verb) || !verbErTest(verb)) {
-     //        $("#demo").html("Please enter a valid verb.");
-     //    }
-     // });
 
  // document.getElementById("submit").addEventListener("click", testVerbs);
 $("#conjugate").click(testVerbs);

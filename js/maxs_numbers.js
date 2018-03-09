@@ -1,8 +1,24 @@
-function playclip1(){
-    var audio = document.getElementsByTagName("audio")[0];
+
+console.log("I'm working");
+
+
+var numbers = document.getElementsByClassName("number");
+var audio = document.getElementsByTagName("audio");
+
+for (var i = 0; i < numbers.length; i++){
+    numbers[i].addEventListener("click", function(){
+        audio[i].play();
+        console.log(i);
+    });
+}
+
+function playclip(n){
+    console.log(n);
+    var audio = document.getElementsByTagName("audio")[n];
     audio.play();
 }
 function playclip2(){
+    console.log("#2");
     var audioTwo = document.getElementsByTagName("audio")[1];
     audioTwo.play();
 }
