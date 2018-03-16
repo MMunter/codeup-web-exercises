@@ -3,12 +3,15 @@ console.log("I'm working");
 
 
 var numbers = document.getElementsByClassName("number");
-var audio = document.getElementsByTagName("audio");
+var audio = document.getElementsByTagName("audio").play();
 
 for (var i = 0; i < numbers.length; i++){
     numbers[i].addEventListener("click", function(){
-        audio[i].play();
-        console.log(i);
+        if(audio !== undefined){
+            audio.then((){
+
+            });
+        }
     });
 }
 
