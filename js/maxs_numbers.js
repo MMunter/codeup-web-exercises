@@ -3,23 +3,29 @@ console.log("I'm working");
 
 
 var numbers = document.getElementsByClassName("number");
-var audio = document.getElementsByTagName("audio").play();
+var audio = document.getElementsByTagName("audio");
 
-for (var i = 0; i < numbers.length; i++){
-    numbers[i].addEventListener("click", function(){
-        if(audio !== undefined){
-            audio.then((){
+// for (var i = 0; i < numbers.length; i++){
+//     numbers[i].addEventListener("click", function(){
+//         playclip(i);
+//     });
+// }
 
-            });
-        }
-    });
-}
+function preload()
 
-function playclip(n){
-    console.log(n);
-    var audio = document.getElementsByTagName("audio")[n];
-    audio.play();
-}
+// function playclip(n){
+//     // console.log(n);
+//     console.log(audio.get(n));
+//     var playPromise = audio.get(n).play();
+//     if (playPromise !== undefined) {
+//         playPromise.then(function() {
+//             // Automatic playback started!
+//         }).catch(function(error) {
+//             // Automatic playback failed.
+//             // Show a UI element to let the user manually start playback.
+//         });
+//     }
+// }
 function playclip2(){
     console.log("#2");
     var audioTwo = document.getElementsByTagName("audio")[1];
