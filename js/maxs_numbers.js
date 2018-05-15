@@ -1,9 +1,9 @@
 
-console.log("I'm working");
-
-
-var numbers = document.getElementsByClassName("number");
-var audio = document.getElementsByTagName("audio");
+// console.log("I'm working");
+//
+//
+// var numbers = document.getElementsByClassName("number");
+// var audio = document.getElementsByTagName("audio");
 
 // for (var i = 0; i < numbers.length; i++){
 //     numbers[i].addEventListener("click", function(){
@@ -11,7 +11,7 @@ var audio = document.getElementsByTagName("audio");
 //     });
 // }
 
-function preload()
+// function preload()
 
 // function playclip(n){
 //     // console.log(n);
@@ -26,6 +26,11 @@ function preload()
 //         });
 //     }
 // }
+
+function playclip(){
+    var audioOne = document.getElementsByTagName("audio")[0];
+    audioOne.play();
+}
 function playclip2(){
     console.log("#2");
     var audioTwo = document.getElementsByTagName("audio")[1];
